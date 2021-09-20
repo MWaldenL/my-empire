@@ -1,0 +1,17 @@
+Double rent Scenario:
+    Player 1 lands on Chance
+    P1 draws double rent card
+
+    P1 applies to property (Old rent = $10, New rent = $20)
+
+    P1 draws another DRCC and applies to same property
+    P2 lands on this property (Old rent = $20, New rent = $40)
+        P3 must pay $40
+
+GameData:
+    - Player rankings based on worth of all assets (incl. buildings and rent) and cash
+
+RentChanceType
+Develop - foot traffic
+Trade - tests
+

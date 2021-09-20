@@ -1,0 +1,17 @@
+# All folders
+out/
+.vscode/
+.idea/
+Part_2/
+APIDocu/
+To_Submit/
+
+# All documents and class files
+*.pdf
+*.gdoc
+*.class
+
+# Other Files
+*Icon\r*
+*Icon*
+

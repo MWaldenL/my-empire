@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MyEmpire.Controller.GameViewController"
+            styleClass="background">
+
+    <!--  Container  -->
+    <AnchorPane AnchorPane.topAnchor="25"
+                AnchorPane.leftAnchor="25"
+                AnchorPane.rightAnchor="25"
+                AnchorPane.bottomAnchor="25">
+
+        <!-- Board -->
+        <AnchorPane fx:id="boardAnchor">
+            <GridPane fx:id="grid" styleClass="board"/>
+            <ImageView fx:id="player1"/>
+            <ImageView fx:id="player2"/>
+            <ImageView fx:id="player3"/>
+            <ImageView fx:id="player4"/>
+        </AnchorPane>
+
+        <!-- Controls Pane -->
+        <AnchorPane AnchorPane.topAnchor="0"
+                    AnchorPane.rightAnchor="0"
+                    AnchorPane.bottomAnchor="25"
+                    fx:id="controlsPane" id="controlsPane">
+            <StackPane AnchorPane.leftAnchor="25"
+                       AnchorPane.topAnchor="25"
+                       AnchorPane.rightAnchor="25"
+                       fx:id="stackPane">
+                <VBox fx:id="inventoryPanel" alignment="center" styleClass="controlsPaneBox">
+                    <Label text="INVENTORY" styleClass="controlsPaneLbl"/>
+                    <ListView fx:id="inventoryList" styleClass="controlsPaneBox"/>
+                    <HBox>
+                        <Button text="Trade" fx:id="tradeBtn" styleClass="action" onAction="#trade"/>
+                        <Button text="Use Chance Card" fx:id="useChanceBtn" styleClass="action" /> <!--onAction="#showApplyChance"-->
+                    </HBox>
+                </VBox>
+
+                <VBox fx:id="propertyListPanel" alignment="center" styleClass="controlsPaneBox">
+                    <Label text="Select property" styleClass="controlsPaneLbl"/>
+                    <ListView fx:id="propertyList" styleClass="controlsPaneBox"/>
+                    <HBox>
+                        <Button text="Apply" fx:id="applyChanceBtn" styleClass="action"/>
+                    </HBox>
+                </VBox>
+
+                <VBox fx:id="curSpacePanel" alignment="center" styleClass="controlsPaneBox">
+                    <Label text="YOU LANDED ON" styleClass="controlsPaneLbl"/>
+                    <TextArea fx:id="curSpaceInfo" editable="false"/>
+                    <Pane fx:id="propOptionPane">
+                        <Button text="Purchase" fx:id="purchaseBtn" styleClass="action" visible="false"/>
+                    </Pane>
+                </VBox>
+
+                <VBox fx:id="rollDicePanel" alignment="center" styleClass="controlsPaneBox">
+                    <Label text="ROLL DICE" styleClass="controlsPaneLbl"/>
+                    <TextArea fx:id="diceValue" editable="false" />
+                </VBox>
+
+                <VBox fx:id="playerStartPanel" alignment="center" styleClass="controlsPaneBox">
+                    <Label text="PLAYER 1 START" fx:id="startPaneLbl" styleClass="controlsPaneLbl"/>
+                    <Button text="ROLL DICE" fx:id="btnDice" onAction="#rollDice" styleClass="action"/>
+                </VBox>
+            </StackPane>
+
+            <Button text="Open Inventory" fx:id="inventoryBtn" styleClass="action"
+                    onAction="#viewInventory"
+                    AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0"/>
+            <TextField fx:id="bankView" editable="false"
+                       AnchorPane.rightAnchor="200"
+                       AnchorPane.leftAnchor="200"
+                       AnchorPane.bottomAnchor="0" />
+
+            <Button text="End Turn" fx:id="endTurnBtn" styleClass="action"
+                    onAction="#endTurn" visible="false"
+                    AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0"/>
+        </AnchorPane>
+    </AnchorPane>
+
+    <Label styleClass= "footer"
+           text="Lua &#38; So CCPROG3-S15 2019"
+           AnchorPane.bottomAnchor="10"
+           AnchorPane.leftAnchor="10" />
+
+    <Button id="toggleMute"
+            fx:id="btnMusic" onAction="#toggleMusic"
+            AnchorPane.bottomAnchor="10"
+            AnchorPane.rightAnchor="10" />
+</AnchorPane>

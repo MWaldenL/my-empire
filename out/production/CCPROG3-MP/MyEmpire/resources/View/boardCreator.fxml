@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.ImageView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MyEmpire.Controller.BoardCreatorController"
+            styleClass="background"
+            fx:id="anchorPane">
+
+    <GridPane AnchorPane.topAnchor="25"
+              AnchorPane.leftAnchor="25"
+              AnchorPane.rightAnchor="25"
+              fx:id="grid"/>
+
+    <VBox fx:id="vBox1">
+        <Label text="Grey"/>
+        <HBox fx:id="grey">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox2">
+        <Label text="Violet"/>
+        <HBox fx:id="violet">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox3">
+        <Label text="Pink"/>
+        <HBox fx:id="pink">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox4">
+        <Label text="Green"/>
+        <HBox fx:id="green">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox5">
+        <Label text="Blue"/>
+        <HBox fx:id="blue">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox6">
+        <Label text="Red"/>
+        <HBox fx:id="red">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox7">
+    <Label text="Yellow"/>
+        <HBox fx:id="yellow">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox8">
+        <Label text="Railroads"/>
+        <HBox fx:id="railroads">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox9">
+        <Label text="Utilities"/>
+        <HBox fx:id="utilities">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox10">
+        <Label text="Chance"/>
+        <HBox fx:id="chance">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+    <VBox fx:id="vBox11">
+        <Label text="Tax"/>
+        <HBox fx:id="tax">
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+            <ImageView onDragDetected="#handleDragDetect" onDragOver="#handleDragOver" onDragDropped="#handleDragDrop"/>
+        </HBox>
+    </VBox>
+
+    <Button styleClass="action" text="Auto-Fill" fx:id="btnAutoFill" onAction="#fillBoard" />
+    <Button styleClass="action" text="START GAME" fx:id="btnDone" visible="false" onAction="#toGame" />
+
+    <Label styleClass= "footer"
+           text="Lua &#38; So CCPROG3-S15 2019"
+           AnchorPane.bottomAnchor="10"
+           AnchorPane.leftAnchor="10" />
+    <Button id="toggleMute"
+            fx:id="btnMusic" onAction="#toggleMusic"
+            AnchorPane.bottomAnchor="10"
+            AnchorPane.rightAnchor="10" />
+
+</AnchorPane>

@@ -1,0 +1,130 @@
+.background{
+    -fx-background-color: #000022;
+}
+
+.label{
+    -fx-font-family: "Times New Roman", Times, serif;
+    -fx-text-fill: #99ccff;
+}
+
+#title {
+    -fx-font-size: 90px;
+    -fx-font-family: "Times New Roman", Times, serif;
+    -fx-text-fill: #99ccff;
+}
+
+.title {
+    -fx-font-family: "Times New Roman", Times, serif;
+    -fx-text-fill: #000022;
+}
+
+.instruction{
+    -fx-font-size: 20px;
+    -fx-font-family: "Times New Roman", Times, serif;
+    -fx-text-fill: #99ccff;
+}
+
+.button {
+    -fx-font-size: 20px;
+    -fx-font-family: "Times New Roman", Times, serif;
+    -fx-text-fill: #99ccff;
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-border-width: 0;
+}
+
+.button:hover {
+    -fx-background-color: #3a3a3a;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: #000022;
+  -fx-text-fill: white
+}
+
+.action{
+    -fx-font-size: 20px;
+    -fx-font-family: "Times New Roman", Times, serif;
+    -fx-text-fill: #99ccff;
+    -fx-background-color: #000000;
+    -fx-cursor: hand;
+    -fx-border-width: 2;
+    -fx-border-color: #99ccff;
+}
+
+.board{
+    -fx-background-color: #b5d3e7;
+    -fx-border-color: #b5d3e7;
+    -fx-border-width: 5;
+}
+
+.text-area:centered .text {
+    -fx-text-alignment: center;
+}
+
+.footer {
+    -fx-font-size: 9px;
+    -fx-font-family: "Helvetica", sans-serif;
+    -fx-text-fill: #999999;
+}
+
+#toggleMute{
+    -fx-font-size: 10px;
+    -fx-font-family: "Helvetica", sans-serif;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #999999;
+    -fx-cursor: hand;
+    -fx-border-width: 1;
+}
+
+#controlsPane {
+    -fx-background-color: #b5d3e7;
+    -fx-text-fill: #ffffff;
+}
+
+.controlsPaneBox {
+    -fx-background-color: #000022;
+}
+
+.controlsPaneLbl{
+    -fx-font-size: 45px;
+    -fx-font-family: "Times New Roman", Times, serif;
+    -fx-text-fill: #99ccff;
+}
+
+#rollDice {
+    -fx-font-size: 24px;
+    -fx-font-family: "Helvetica", sans-serif;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #999999;
+    -fx-border-radius: 30 30 30 30;
+    -fx-cursor: hand;
+    -fx-border-width: 1;
+}
+
+#trade {
+    -fx-font-size: 24px;
+    -fx-font-family: "Helvetica", sans-serif;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #999999;
+    -fx-border-radius: 30 30 30 30;
+    -fx-cursor: hand;
+    -fx-border-width: 1;
+}
+
+.container {
+    -fx-background-color: #999999;
+    -fx-border-width: 2;
+    -fx-pref-width: 280;
+    -fx-pref-height: 70;
+}
+
+.ranking{
+    -fx-font-size: 20px;
+    -fx-text-fill: #99ccff;
+}
+
+.gameOver{
+    -fx-font-size: 200px;
+    -fx-font-family: "Chiller", Times, serif;
+}
